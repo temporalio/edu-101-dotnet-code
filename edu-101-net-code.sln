@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exercises", "exercises", "{1E025B14-77EE-460B-BDFB-EE2B63ED56C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "finale-workflow", "finale-workflow", "{5302348F-3B38-4CC7-B035-57D49EFA75F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{115179D0-B6E3-49F2-9BF9-90F1670CDBC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "exercises\finale-workflow\src\Client\Client.csproj", "{00492023-1C7A-4C78-AEC8-C7134C9322FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00492023-1C7A-4C78-AEC8-C7134C9322FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00492023-1C7A-4C78-AEC8-C7134C9322FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00492023-1C7A-4C78-AEC8-C7134C9322FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00492023-1C7A-4C78-AEC8-C7134C9322FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5302348F-3B38-4CC7-B035-57D49EFA75F7} = {1E025B14-77EE-460B-BDFB-EE2B63ED56C7}
+		{115179D0-B6E3-49F2-9BF9-90F1670CDBC1} = {5302348F-3B38-4CC7-B035-57D49EFA75F7}
+		{00492023-1C7A-4C78-AEC8-C7134C9322FC} = {115179D0-B6E3-49F2-9BF9-90F1670CDBC1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A7AFC70-7493-4339-954D-2CE616A7E4EE}
+	EndGlobalSection
+EndGlobal

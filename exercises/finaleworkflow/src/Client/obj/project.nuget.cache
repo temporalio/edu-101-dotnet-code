@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hg2tPkWuTZPPK0IwafOH8LaOwY5vLHjaQjf7XhCYjJ4GgS7UYalUIE3g48zb7CZkyCuDZ6h12BhIkMp4sBDgVQ==",
+  "success": true,
+  "projectFilePath": "/Users/azhou/Desktop/edu-101-net-code/exercises/finaleworkflow/src/Client/Client.csproj",
+  "expectedPackageFiles": [
+    "/Users/azhou/.nuget/packages/google.protobuf/3.21.9/google.protobuf.3.21.9.nupkg.sha512",
+    "/Users/azhou/.nuget/packages/microsoft.extensions.logging.abstractions/2.2.0/microsoft.extensions.logging.abstractions.2.2.0.nupkg.sha512",
+    "/Users/azhou/.nuget/packages/temporalio/0.1.0-beta1/temporalio.0.1.0-beta1.nupkg.sha512"
+  ],
+  "logs": []
+}
