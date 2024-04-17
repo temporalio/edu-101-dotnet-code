@@ -511,3 +511,6 @@ $RECYCLE.BIN/
 *.pidb
 *.svclog
 *.scc
+
+# Mac OS junk
+.DS_Store

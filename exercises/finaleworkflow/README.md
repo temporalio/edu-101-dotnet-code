@@ -14,12 +14,11 @@ TypeScript program.
 
 # Start the Worker (Java)
 
-In one terminal, run the following command from the `finaleworkflow` directory:
+1. Change into the `finaleworkflow` directory.
+2. In one terminal, run the following command:
 
-```
-java -classpath \
-java-activity-and-worker.jar \
-io.temporal.training.PdfCertWorker
+```sh
+java -classpath java-activity-and-worker.jar io.temporal.training.PdfCertWorker
 ```
 
 # Edit the Workflow (dotnet)
@@ -28,7 +27,8 @@ Open the [Program.cs](./src/Client/Program.cs) file, and change the argument pas
 
 # Start the Workflow (dotnet)
 
-Run the command below from the src directory in another terminal to start the Workflow:
+1. Change into the `src` directory.
+2. Run the command below in another terminal to start the Workflow:
 
 ```sh
 dotnet run --project Client/Client.csproj
