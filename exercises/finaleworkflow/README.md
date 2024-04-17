@@ -35,13 +35,11 @@ dotnet run --project Client/Client.csproj
 ```
 
 - Once the Workflow is complete, use the explorer
-  view on the left side of the exercise environment
-  to locate the file created by this workflow. It
+  view to locate the file created by this Workflow. It
   will have a name similar to `101_certificate_maxim_fateev.pdf`,
   only with your name in place of `maxim_fateev`.
-- Right-click its icon in the explorer view and choose
-  **Download...**.
-- After you've downloading it to your
+- Right-click its icon and choose **Download...**.
+- After you've downloaded it to your
   computer, open it with your preferred PDF viewer.
 
 Thank you for participating in Temporal 101!
