@@ -14,7 +14,7 @@ TypeScript program.
 
 # Start the Worker (Java)
 
-In one terminal, run the following command:
+In one terminal, run the following command from the `finaleworkflow` directory:
 
 ```
 java -classpath \
@@ -28,10 +28,10 @@ Open the [Program.cs](./src/Client/Program.cs) file, and change the argument pas
 
 # Start the Workflow (dotnet)
 
-Run the command below from another terminal to start the Workflow:
+Run the command below from the src directory in another terminal to start the Workflow:
 
 ```sh
-dotnet run --project ./exercises/finaleworkflow/src/Client/Client.csproj
+dotnet run --project Client/Client.csproj
 ```
 
 - Once the Workflow is complete, use the explorer
