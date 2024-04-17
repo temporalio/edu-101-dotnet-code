@@ -7,7 +7,7 @@ var client = await TemporalClient.ConnectAsync(new()
 });
 
 // TODO: Change 'Maxim Fateev' to your name
-var handle = await client.StartWorkflowAsync((ICertificateGeneratorWorkflow x) => x.RunAsync("Maxim Fateev"),
+var handle = await client.StartWorkflowAsync((ICertificateGeneratorWorkflow wf) => wf.RunAsync("Maxim Fateev"),
     new WorkflowOptions
     {
         TaskQueue = "generate-certificate-taskqueue",
