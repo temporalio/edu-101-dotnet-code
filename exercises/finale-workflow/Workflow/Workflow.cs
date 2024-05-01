@@ -1,5 +1,4 @@
 using Temporalio.Workflows;
-namespace Temporalio.FinaleWorkflow.CertificateGeneratorWorkflow;
 
 [Workflow]
 public interface ICertificateGeneratorWorkflow

@@ -1,5 +1,4 @@
 ﻿using Temporalio.Client;
-using Temporalio.FinaleWorkflow.CertificateGeneratorWorkflow;
 
 var client = await TemporalClient.ConnectAsync(new ()
 {

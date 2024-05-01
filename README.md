@@ -25,6 +25,7 @@ Directory Name                         | Description
 The following links provide additional information that you may find helpful as you work through this course.
 * [General Temporal Documentation](https://docs.temporal.io/)
 * [Temporal .NET SDK API Reference](https://dotnet.temporal.io/)
+* [.NET SDK Reference](https://github.com/temporalio/sdk-dotnet/)
 * [C# Language Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
 * [GitPod Documentation: Troubleshooting](https://www.gitpod.io/docs/troubleshooting)
 
