@@ -40,5 +40,3 @@ dotnet run --project Client.csproj
 Thank you for participating in Temporal 101!
 
 ### This is the end of the exercise.
-
-C# CLIENT -> C# WORKER FIRST -> JAVA WORKER 
