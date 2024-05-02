@@ -10,7 +10,7 @@ public class CertificateGeneratorWorkflow
         // Adjust the "CreatePdf" activity type and method call to reflect the actual implementation in Java.
         return await Workflow.ExecuteActivityAsync<string>("CreatePdf", new object[] { name }, new()
         {
-            StartToCloseTimeout = TimeSpan.FromSeconds(15)
+            StartToCloseTimeout = TimeSpan.FromSeconds(5)
         });
     }
 }
