@@ -1,4 +1,5 @@
 ﻿using Temporalio.Client;
+using MyNamespace;
 
 var client = await TemporalClient.ConnectAsync(new ()
 {
@@ -6,7 +7,7 @@ var client = await TemporalClient.ConnectAsync(new ()
 });
 
 // TODO: Change 'Maxim Fateev' to your name
-var handle = await client.StartWorkflowAsync((ICertificateGeneratorWorkflow wf) => wf.RunAsync("Maxim Fateev"),
+var handle = await client.StartWorkflowAsync((CertificateGeneratorWorkflow wf) => wf.RunAsync("Maxim Fateev"),
     new WorkflowOptions
     {
         TaskQueue = "generate-certificate-taskqueue",

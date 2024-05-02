@@ -27,7 +27,7 @@ Open the [Program.cs](./Client/Program.cs) file, and change the argument passed 
 
 # Start the Workflow
 
-1. Run the command below in another terminal to start the Workflow:
+1. Run the command below in another terminal to start the Workflow from the Client directory:
 
 ```sh
 dotnet run --project Client.csproj
@@ -40,3 +40,5 @@ dotnet run --project Client.csproj
 Thank you for participating in Temporal 101!
 
 ### This is the end of the exercise.
+
+C# CLIENT -> C# WORKER FIRST -> JAVA WORKER 
