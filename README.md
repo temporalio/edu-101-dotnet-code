@@ -1,7 +1,7 @@
 # Code Repository for Temporal 101 (.NET)
 
 This repository provides code used for exercises and demonstrations
-included in the TypeScript version of the [Temporal 101](https://github.com/temporalio/edu-101-dotnet-content) training course.
+included in the .NET version of the [Temporal 101](https://github.com/temporalio/edu-101-dotnet-content) training course.
 
 It's important to remember that the example code used in this course was designed to support learning a specific aspect of Temporal, not to serve as a ready-to-use template for implementing a production system.
 
