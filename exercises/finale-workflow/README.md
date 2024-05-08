@@ -2,7 +2,7 @@
 
 One of the benefits of Temporal is that it provides SDKs for several
 languages and you can use multiple languages in the context of a single
-Workflow. For example, you might write your Workflow in TypeScript but use
+Workflow. For example, you might write your Workflow in C# but use
 Java or Go for an Activity in that Workflow.
 
 The last exercise in this workshop does exactly that. The Workflow

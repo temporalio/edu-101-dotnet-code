@@ -39,4 +39,4 @@ You can launch an exercise environment for this course in GitPod by clicking the
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-101-dotnet-code)
 
 Alternatively, you can follow
-[these instructions](https://learn.temporal.io/getting_started/dotnet/dev_environment/) to set up your own Temporal Cluster with Docker Compose, which you can use as an exercise environment.
+[these instructions](https://learn.temporal.io/getting_started/dotnet/dev_environment/) to set up your own Temporal Cluster with the `temporal` CLI, which you can use as an exercise environment.
