@@ -12,4 +12,4 @@ var result = await client.ExecuteWorkflowAsync(
 
 Console.WriteLine("Workflow result: {0}", result);
 
-// TODO: modify the statement above to specify the task queue name (i.e - change the task queue to greeting-tasks)
+// TODO PART B: modify the statement above to specify the Task Queue name (i.e - change the Task Queue to greeting-tasks)

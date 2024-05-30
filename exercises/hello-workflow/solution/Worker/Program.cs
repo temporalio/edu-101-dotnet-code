@@ -18,8 +18,6 @@ Console.CancelKeyPress += (_, eventArgs) =>
 var activities = new MyActivities();
 
 // Create worker
-
-// TODO: modify the statement below to specify the task queue name (i.e - greeting-tasks) 
 using var worker = new TemporalWorker(
     client,
     new TemporalWorkerOptions("greeting-tasks").
