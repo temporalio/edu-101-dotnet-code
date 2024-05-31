@@ -18,38 +18,56 @@ The `TranslateActivities.cs` file contains a method(`GetSpanishGreeting`) that u
 microservice to get a customized greeting in Spanish. Follow these steps to create 
 a new Activity that gets a custom farewell message from the microservice:
 
-1. Open the `TranslateActivities.cs` file. This is located in the `practice/Workflow`
-   subdirectory under the `farewell-workflow` directory in `exercises`.
+1. Open the `TranslateActivities.cs` file. This is located in the 
+`exercises/farewell-workflow/practice/Workflow` subdirectory.
 2. Create a new Activity that will get a custom farewell message.
-   1. Copy the `GetSpanishGreeting` method to create a new Activity.
-   2. Rename the new `GetSpanishGreeting` function to `GetSpanishFarewell`.
-   3. Save your changes to this file.
+   2. Copy the `GetSpanishGreeting` method to create a new Activity.
+   3. Modify the Activity to call `GetSpanishFarewell`
+   3. Rename the new `GetSpanishGreeting` function to `GetSpanishFarewell`.
+   4. Save your changes to this file.
 
 ## Part B: Register the Activity Function
 1. Open the `Program.cs` file in the Worker subdirectory in your code editor.
-2. Add a new line that registers your new Activity with the Worker (hint: you'll use the name you used for the new method in an earlier step).
+2. Add a new line that registers your new Activity with the Worker (hint: you'll 
+use the name you used for the new method in an earlier step).
 3. Save your changes to this file.
 
 ## Part C: Modify the Workflow to Execute Your New Activity
-1. Open the `GreetingWorkflow.cs` file (located in the `practice/Workflow` subdirectory) in the editor.
-2. Look for the TODO message, uncomment the lines below it, and then update this code to execute the Activity function you created.
+1. Open the `GreetingWorkflow.cs` file (located in the 
+`exercises/farewell-workflow/practice/Workflow` subdirectory) in the editor.
+2. Look for the TODO message, uncomment the lines below it, and then 
+update this code to execute the Activity function you created.
 3. Save your changes to this file.
 
 ## Part D: Start the Microservice and Run the Workflow
-First, make sure the Temporal Service is running in the background. This is done by opening a new terminal window and running the following command: `temporal server start-dev --ui-port 8080 --db-filename clusterdata.db`. For more details on this command, please refer to the `Setting up a Local Development Environment` chapter in the course. 
+If you're using the Gitpod environment to run this exercise, you don't 
+need to run the Temporal Service on your local environment. 
 
-Note: If you're using the Gitpod environment to run this exercise, you can skip this step.
+If you are on your local environment, make sure the Temporal Service is 
+running in the background. This is done by opening a new terminal window 
+and running the following command: 
+`temporal server start-dev --ui-port 8080 --db-filename clusterdata.db`. 
+For more details on this command, please refer to the 
+`Setting up a Local Development Environment` chapter in the course. 
 
 ### Run the Microservice
-1. Open a terminal and navigate to the `practice` subdirectory.
-2. Run the following command in a new terminal to start the microservice: `dotnet run --project Web`.
+1. Open a terminal and navigate to the `practice` subdirectory 
+(`cd exercises/farewell-workflow/practice`) through the terminal. 
+2. Run the following command in a new terminal to start the microservice: 
+`dotnet run --project Web`.
 
 ### Start the Worker
-1. In another terminal in the `practice` subdirectory, start your Worker by running: `dotnet run --project Worker`.
+1. In another terminal, navigate to the `practice` subdirectory 
+(`cd exercises/farewell-workflow/practice`), start your Worker by 
+running: `dotnet run --project Worker`.
 
 ### Execute the Workflow:
-1. Open a third terminal in the `practice` subdirectory.
-2. Run your workflow by the following command: `dotnet run --project Client -- "Donna"` (replacing `Donna` with your own name or run `dotnet run --project Client` and enter your name in the terminal).
+1. Open a third terminal in the `practice` subdirectory 
+(`cd exercises/farewell-workflow/practice`).
+2. Run your workflow by the following command: 
+`dotnet run --project Client -- "Donna"` (replacing `Donna` 
+with your own name or run `dotnet run --project Client` and 
+enter your name in the terminal).
 
 If there is time remaining, experiment with Activity failures and retries 
 by stopping the microservice (press Ctrl-C in its terminal) and re-running 
