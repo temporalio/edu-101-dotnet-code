@@ -1,7 +1,7 @@
 // run the worker
 using Temporalio.Client;
 using Temporalio.Worker;
-using MyNamespace;
+using Temporalio.Finale.Workflow;
 
 // Create a client to localhost on "default" namespace
 var client = await TemporalClient.ConnectAsync(new("localhost:7233"));

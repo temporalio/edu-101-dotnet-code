@@ -1,5 +1,5 @@
+namespace Temporalio.Finale.Workflow;
 using Temporalio.Workflows;
-namespace MyNamespace;
 
 [Workflow]
 public class CertificateGeneratorWorkflow

@@ -1,5 +1,5 @@
 ﻿using Temporalio.Client;
-using MyNamespace;
+using Temporalio.Finale.Workflow;
 
 var client = await TemporalClient.ConnectAsync(new ()
 {
