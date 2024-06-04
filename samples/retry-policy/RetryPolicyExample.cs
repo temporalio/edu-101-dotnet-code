@@ -3,7 +3,7 @@ namespace MyNamespace;
 using Temporalio.Workflows;
 
 [Workflow]
-public class SayHelloWorkflow
+public class RetryPolicyExample
 {
     [WorkflowRun]
     public async Task<string> RunAsync(string name)
