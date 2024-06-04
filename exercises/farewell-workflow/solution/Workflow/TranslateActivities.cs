@@ -4,7 +4,7 @@ using Temporalio.Activities;
 
 public class TranslateActivities
 {
-    public static HttpClient client = new HttpClient();
+    private static readonly HttpClient client = new();
 
     [Activity]
     public static async Task<string> GetSpanishGreeting(string name)

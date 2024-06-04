@@ -23,7 +23,7 @@ try
 {
     // Start the workflow
     var handle = await client.StartWorkflowAsync(
-        (GreetAndFarewell wf) => wf.RunAsync(name),
+        (GreetingWorkflow wf) => wf.RunAsync(name),
         new(id: workflowId, taskQueue: "farewell-workflow"));
 
     Console.WriteLine($"Started Workflow {workflowId}");

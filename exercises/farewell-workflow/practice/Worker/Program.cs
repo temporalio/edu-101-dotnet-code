@@ -14,7 +14,17 @@ IHost host = Host.CreateDefaultBuilder(args)
             clientNamespace: "default",
             taskQueue: "farewell-workflow").
         AddStaticActivities(typeof(TranslateActivities)). // add activities
-        AddWorkflow<GreetAndFarewell>()) // add workflow
+        AddWorkflow<GreetingWorkflow>()) // add workflow
     .Build();
 
 host.Run();
+
+// Run worker until cancelled
+ Console.WriteLine("Running worker");
+ try
+ {
+     await worker.ExecuteAsync(tokenSource.Token);
+ }
+ catch (OperationCanceledException)
+ {
+     Console.WriteLine("Worker cancelled");

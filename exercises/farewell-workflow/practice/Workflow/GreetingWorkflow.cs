@@ -2,7 +2,7 @@ namespace Temporalio.Farewell.Workflow;
 using Temporalio.Workflows;
 
 [Workflow]
-public class GreetAndFarewell
+public class GreetingWorkflow
 {
 
     [WorkflowRun]

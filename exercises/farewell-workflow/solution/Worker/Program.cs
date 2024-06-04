@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Temporalio.Farewell.Workflow;
 
+
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureLogging(ctx =>
         ctx.AddSimpleConsole().SetMinimumLevel(LogLevel.Information))
@@ -14,7 +15,11 @@ IHost host = Host.CreateDefaultBuilder(args)
             clientNamespace: "default",
             taskQueue: "farewell-workflow").
         AddStaticActivities(typeof(TranslateActivities)). // add activities
-        AddWorkflow<GreetAndFarewell>()) // add workflow
+        AddWorkflow<GreetingWorkflow>()) // add workflow
     .Build();
+    await host.RunAsync();
 
-host.Run();
+
+ host.Run();
+
+
