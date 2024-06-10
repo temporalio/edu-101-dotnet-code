@@ -1,10 +1,10 @@
 # Exercise 1: Hello Workflow
 
 During this exercise, you will
-* Review the business logic of the provided Workflow Definition to understand its behavior
-* Modify the Worker initialization code to specify a Task Queue name
-* Run the Worker initialization code to start the Worker process
-* Execute the Workflow from the command line, specifying your name as input
+* Review the business logic of the provided Workflow Definition to understand its behavior.
+* Modify the Worker initialization code to specify a Task Queue name.
+* Run the Worker initialization code to start the Worker process.
+* Execute the Workflow from the command line, specifying your name as input.
 
 Make your changes to the code in the `practice` subdirectory (look for TODO 
 comments that will guide you to where you should make changes to the code). 
