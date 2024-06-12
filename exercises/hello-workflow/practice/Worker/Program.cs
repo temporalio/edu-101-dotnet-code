@@ -22,7 +22,7 @@ var activities = new MyActivities();
 using var worker = new TemporalWorker(
     client,
     new TemporalWorkerOptions("my-task-queue"). // TODO PART B: modify the statement here to specify the Task Queue name
-        AddActivity(activities.SayHello).
+        AddAllActivities(activities).
         AddWorkflow<SayHelloWorkflow>());
 
 // Run worker until cancelled

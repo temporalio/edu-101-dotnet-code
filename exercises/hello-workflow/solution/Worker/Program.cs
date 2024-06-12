@@ -21,7 +21,7 @@ var activities = new MyActivities();
 using var worker = new TemporalWorker(
     client,
     new TemporalWorkerOptions("greeting-tasks").
-        AddActivity(activities.SayHello).
+        AddAllActivities(activities).
         AddWorkflow<SayHelloWorkflow>());
 
 // Run worker until cancelled
