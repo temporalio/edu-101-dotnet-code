@@ -1,4 +1,4 @@
-// run the worker
+// Run the Worker
 using Temporalio.Client;
 using Temporalio.Worker;
 using Temporalio.Finale.Workflow;

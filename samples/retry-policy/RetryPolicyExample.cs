@@ -10,7 +10,9 @@ public class RetryPolicyExample
     {
         return await Workflow.ExecuteActivityAsync(
             (MyActivities act) => act.SayHello(name),
-            new() { StartToCloseTimeout = TimeSpan.FromSeconds(90), // Schedule a retry if the Activity function doesn't return within 90 seconds
+            new()
+            {
+                StartToCloseTimeout = TimeSpan.FromSeconds(90), // Schedule a retry if the Activity function doesn't return within 90 seconds
             },
             RetryPolicy = new()
             {

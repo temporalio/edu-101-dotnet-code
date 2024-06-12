@@ -1,18 +1,13 @@
 ﻿using Temporalio.Client;
 using Temporalio.Finale.Workflow;
 
-var client = await TemporalClient.ConnectAsync(new ()
-{
-    TargetHost = "localhost:7233",
-});
+// Create a client to localhost on "default" namespace
+var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
 
 // TODO: Change 'Maxim Fateev' to your name
-var handle = await client.StartWorkflowAsync((CertificateGeneratorWorkflow wf) => wf.RunAsync("Maxim Fateev"),
-    new WorkflowOptions
-    {
-        TaskQueue = "generate-certificate-taskqueue",
-        Id = "cert-generator-workflow-" + Guid.NewGuid()
-    });
+var handle = await client.ExecuteWorkflowAsync(
+    (CertificateGeneratorWorkflow wf) => wf.RunAsync("Maxim Fateev"),
+    new(id: $"cert-generator-workflow-{Guid.NewGuid()}", taskQueue: "generate-certificate-taskqueue"));
 
-Console.WriteLine("Started workflow {0}", handle.Id);
-Console.WriteLine("You can find your certificate of completion here: " + await handle.GetResultAsync());
+Console.WriteLine($"Started workflow: cert-generator-workflow-${Guid.NewGuid()}");
+Console.WriteLine($"You can find your certificate of completion here + ${handle}");
