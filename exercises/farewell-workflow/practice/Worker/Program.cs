@@ -17,14 +17,4 @@ IHost host = Host.CreateDefaultBuilder(args)
         AddWorkflow<GreetingWorkflow>()) // add workflow
     .Build();
 
-host.Run();
-
-// Run worker until cancelled
- Console.WriteLine("Running worker");
- try
- {
-     await worker.ExecuteAsync(tokenSource.Token);
- }
- catch (OperationCanceledException)
- {
-     Console.WriteLine("Worker cancelled");
+await host.RunAsync();

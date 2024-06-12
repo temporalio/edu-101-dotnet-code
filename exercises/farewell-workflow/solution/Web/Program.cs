@@ -1,22 +1,13 @@
-using Temporalio.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Temporalio.Farewell.Workflow;
 
-//   call this via HTTP GET with a URL like:
-//   http://localhost:5125/get-spanish-farewell?name=Temporal
-//   http://localhost:5125/get-spanish-farewell?name=Temporal
-
-// Setup the ASP.NET Core application
 var builder = WebApplication.CreateBuilder(args);
 
-// Console logging
 builder.Logging.AddSimpleConsole().SetMinimumLevel(LogLevel.Information);
 
 var app = builder.Build();
 
-// HTTP Endpoint for Spanish Greeting
 app.MapGet("/get-spanish-greeting", (HttpContext context) =>
 {
     var query = context.Request.Query["name"];
@@ -33,7 +24,6 @@ app.MapGet("/get-spanish-greeting", (HttpContext context) =>
     }
 });
 
-// HTTP Endpoint for Spanish Farewell
 app.MapGet("/get-spanish-farewell", (HttpContext context) =>
 {
     var query = context.Request.Query["name"];
@@ -50,5 +40,5 @@ app.MapGet("/get-spanish-farewell", (HttpContext context) =>
     }
 });
 
-app.Run();  // Start the web server
+app.Run();
 

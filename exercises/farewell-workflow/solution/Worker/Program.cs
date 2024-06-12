@@ -17,9 +17,8 @@ IHost host = Host.CreateDefaultBuilder(args)
         AddStaticActivities(typeof(TranslateActivities)). // add activities
         AddWorkflow<GreetingWorkflow>()) // add workflow
     .Build();
-    await host.RunAsync();
 
+await host.RunAsync();
 
- host.Run();
 
 

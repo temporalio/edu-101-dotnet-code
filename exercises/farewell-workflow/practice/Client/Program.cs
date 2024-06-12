@@ -8,7 +8,7 @@ var client = await TemporalClient.ConnectAsync(new("localhost:7233") { Namespace
 var workflowId = $"greeting-{Guid.NewGuid()}";
 
 // Default to "Temporal" and overriding if a valid argument is provided
-string name = (args.Length > 0 && !string.IsNullOrEmpty(args[0])) ? args[0] : "Temporal";  // Default name
+var name = args.FirstOrDefault() ?? "Temporal";  // Default name
 
 // If 'name' is "Temporal", prompt for user-input name
 if (name == "Temporal") {
@@ -16,7 +16,7 @@ if (name == "Temporal") {
     var userInput = Console.ReadLine();
 
     // Override 'name' if user input is not empty
-    name = !string.IsNullOrEmpty(userInput) ? userInput : "Temporal";  // Keep default if input is empty
+    name = !string.IsNullOrEmpty(userInput) ? userInput : name;  // Keep default if input is empty
 }
 
 try
