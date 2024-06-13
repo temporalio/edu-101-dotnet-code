@@ -16,7 +16,7 @@ in the `solution` subdirectory.
 1. Change into the practice subdirectory using the following command:
 
 ```bash
-cd edu-101-dotnet-code/exercises/hello-workflow/practice/
+cd edu-101-dotnet-code/exercises/helloworld-workflow/practice/
 ```
 2. Open the `Workflow.cs` file (located in the `Workflow` folder under `practice`) 
    in the editor.
@@ -35,7 +35,7 @@ cd edu-101-dotnet-code/exercises/hello-workflow/practice/
 ## Part C: Start the Worker
 
 1. Make sure you're in the practice subdirectory. You can do this by 
-running `cd edu-101-dotnet-code/exercises/hello-workflow/practice/`. 
+running `cd edu-101-dotnet-code/exercises/helloworld-workflow/practice/`. 
 
 2. Run the following command in the terminal window to start the Worker. 
 
@@ -52,7 +52,7 @@ the command.
 
 1. Open another terminal window in the environment and change to the 
    `Client` folder under `practice` for this exercise. You can do this by 
-running `cd edu-101-dotnet-code/exercises/hello-workflow/practice/Client`. 
+running `cd edu-101-dotnet-code/exercises/helloworld-workflow/practice/Client`. 
 2. Run the following command, replacing `Donna` with your own name. 
    Be sure to retain the same quoting shown here when you run the command:
 
