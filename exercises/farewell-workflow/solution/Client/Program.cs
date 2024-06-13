@@ -1,39 +1,22 @@
-﻿// Run Workflow file
+﻿// Run the Workflow file
 using Temporalio.Client;
 using Temporalio.Farewell.Workflow;
 
-// Connect to the Temporal server
-var client = await TemporalClient.ConnectAsync(new("localhost:7233") { Namespace = "default" });
+// Connect to the Temporal Service
+var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
 
 var workflowId = $"greeting-{Guid.NewGuid()}";
 
-// Default to "Temporal" and overriding if a valid argument is provided
-var name = args.FirstOrDefault() ?? "Temporal";  // Default name
-
-// If 'name' is "Temporal", prompt for user-input name
-if (name == "Temporal") {
+var name = args.FirstOrDefault();
+if (string.IsNullOrEmpty(name)) {
     Console.WriteLine("Please enter your name:");
-    var userInput = Console.ReadLine();
-
-    // Override 'name' if user input is not empty
-    name = !string.IsNullOrEmpty(userInput) ? userInput : name;  // Keep default if input is empty
+    name = Console.ReadLine();
+    name = !string.IsNullOrEmpty(name) ? name : "Temporal";  // Set default if input is empty
 }
 
-try
-{
-    // Start the workflow
-    var handle = await client.StartWorkflowAsync(
-        (GreetingWorkflow wf) => wf.RunAsync(name),
-        new(id: workflowId, taskQueue: "farewell-workflow"));
+// Start the Workflow
+var result = await client.ExecuteWorkflowAsync(
+    (GreetingWorkflow wf) => wf.RunAsync(name),
+    new(id: workflowId, taskQueue: "farewell-workflow"));
 
-    Console.WriteLine($"Started Workflow {workflowId}");
-
-    // Await the result of the workflow
-    var result = await handle.GetResultAsync();
-    Console.WriteLine($"Workflow result: {result}");  // Output workflow result
-}
-catch (Exception ex)
-{
-    Console.Error.WriteLine($"Workflow execution failed: {ex.Message}");
-}
-
+Console.WriteLine($"Workflow result: {result}");  // Output Workflow result
