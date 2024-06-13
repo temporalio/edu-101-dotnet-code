@@ -16,7 +16,7 @@ in the `solution` subdirectory.
 1. Change into the practice subdirectory using the following command:
 
 ```bash
-cd /workspace/edu-101-dotnet-code/exercises/hello-workflow/practice/
+cd edu-101-dotnet-code/exercises/hello-workflow/practice/
 ```
 2. Open the `Workflow.cs` file (located in the `Workflow` folder under `practice`) 
    in the editor.
@@ -25,7 +25,7 @@ cd /workspace/edu-101-dotnet-code/exercises/hello-workflow/practice/
 ## Part B: Specify a Task Queue Name for the Worker
 
 1. Open the `Program.cs` file (located in the `Client` folder under `practice`) 
-   in the editor.
+   in the editor. 
 2. Write `greeting-tasks` as the name of the Task Queue.
 3. Save your changes.
 4. Repeat and open the `Program.cs` file in the `Worker` folder under `practice`.
@@ -34,8 +34,10 @@ cd /workspace/edu-101-dotnet-code/exercises/hello-workflow/practice/
 
 ## Part C: Start the Worker
 
-1. Make sure you're in the practice subdirectory. Run the following command in the 
-terminal window to start the Worker.
+1. Make sure you're in the practice subdirectory. You can do this by 
+running `cd edu-101-dotnet-code/exercises/hello-workflow/practice/`. 
+
+2. Run the following command in the terminal window to start the Worker. 
 
 ```
 dotnet run --project Worker
@@ -43,21 +45,29 @@ dotnet run --project Worker
 
 Note: If you're running this on your local, make sure you are running 
 the Temporal Service. In a new terminal window, run the following command: 
-`temporal server start-dev`.
+`temporal server start-dev`. You should see "Running worker" after running 
+the command. 
 
 ## Part D: Start the Workflow from the Command Line
 
 1. Open another terminal window in the environment and change to the 
-   `Client` folder under `practice` for this exercise.
+   `Client` folder under `practice` for this exercise. You can do this by 
+running `cd edu-101-dotnet-code/exercises/hello-workflow/practice/Client`. 
 2. Run the following command, replacing `Donna` with your own name. 
    Be sure to retain the same quoting shown here when you run the command:
 
+**For Bash:**
 ```bash
 temporal workflow start \
     --type SayHelloWorkflow \
     --task-queue greeting-tasks \
     --workflow-id my-first-workflow \
     --input '"Donna"'
+```
+
+**For Powershell:**
+```powershell
+temporal workflow start --type SayHelloWorkflow --task-queue greeting-tasks --workflow-id my-first-workflow --input '"Donna"'
 ```
 
 Note that this command starts the Workflow, but it does not wait for 
