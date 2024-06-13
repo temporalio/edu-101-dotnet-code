@@ -1,5 +1,5 @@
 ﻿// This file is designated to run the Workflow
-using MyNamespace;
+using Temporalio.HelloWorld.Workflow;
 using Temporalio.Client;
 
 // Create a client to localhost on "default" namespace

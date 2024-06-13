@@ -1,5 +1,4 @@
-namespace MyNamespace;
-
+namespace Temporalio.HelloWorld.Workflow;
 using Temporalio.Workflows;
 
 [Workflow]
