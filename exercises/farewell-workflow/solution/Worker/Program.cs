@@ -1,8 +1,8 @@
 ﻿// Run Worker
-using Temporalio.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
+using Temporalio.Extensions.Hosting;
 using Temporalio.Farewell.Workflow;
 
 IHost host = Host.CreateDefaultBuilder(args)

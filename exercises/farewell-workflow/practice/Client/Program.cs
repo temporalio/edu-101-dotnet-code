@@ -11,7 +11,7 @@ var name = args.FirstOrDefault();
 if (string.IsNullOrEmpty(name)) {
     Console.WriteLine("Please enter your name:");
     name = Console.ReadLine();
-    name = !string.IsNullOrEmpty(name) ? name : "Temporal";  // Set default if input is empty
+    name = !string.IsNullOrEmpty(name) ? name : "Temporal";  // Keep default if input is empty
 }
 
 // Start the Workflow
