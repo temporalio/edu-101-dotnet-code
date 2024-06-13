@@ -1,6 +1,8 @@
 // Translate Activities
-using Temporalio.Activities;
 namespace Temporalio.Farewell.Workflow;
+
+using Temporalio.Activities;
+
 public class TranslateActivities
 {
     private static readonly HttpClient client = new();
