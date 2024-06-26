@@ -8,10 +8,8 @@ public class CertificateGeneratorWorkflow
     public async Task<string> RunAsync(string name)
     {
         // The CertificateGeneratorWorkflow Workflow calls the CreatePdf Activity. 
-        // CreatePdf is the Activity Type defined in the implementation of the Java Activity code.
-        return await Workflow.ExecuteActivityAsync<string>("CreatePdf", new object[] { name }, new()
-        {
-            StartToCloseTimeout = TimeSpan.FromSeconds(5)
-        });
+
+        return await Workflow.ExecuteActivityAsync((IJavaActivities act) => act.CreatePdf(name),
+            new() { StartToCloseTimeout = TimeSpan.FromSeconds(5) });
     }
 }
