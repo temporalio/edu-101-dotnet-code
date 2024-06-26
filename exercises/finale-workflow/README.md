@@ -7,12 +7,12 @@ Java or Go for an Activity in that Workflow.
 
 The last exercise in this workshop does exactly that. The Workflow
 itself is written in C#, but the Activity that is executed as part
-of this Workflow is written in Java, as is the Worker that runs it. Since the Activity is 
-written in Java, it's able to use a Java graphics library that would otherwise be would be 
+of this Workflow is written in Java, as is the Worker that runs it. Since the Activity is
+written in Java, it's able to use a Java graphics library that would otherwise be would be
 incompatible with a typical C# program.
 
-The bonus part of this exercise is that you get a certificate for completing this course. 
-In order to receive this certificate, you must change the default name in the Workflow 
+The bonus part of this exercise is that you get a certificate for completing this course.
+In order to receive this certificate, you must change the default name in the Workflow
 and follow the following steps below.
 
 # Start the Worker (Java)
