@@ -1,5 +1,5 @@
 // This file is designated to run the Worker
-using Temporalio.HelloWorld.Workflow;
+using TemporalioHelloWorld;
 using Temporalio.Client;
 using Temporalio.Worker;
 
