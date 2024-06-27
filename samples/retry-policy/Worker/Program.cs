@@ -1,6 +1,6 @@
 // Run the Worker
+using RetryPolicySample;
 using Temporalio.Client;
-using Temporalio.Finale.Workflow;
 using Temporalio.Worker;
 
 // Create a client to localhost on "default" namespace
@@ -14,11 +14,15 @@ Console.CancelKeyPress += (_, eventArgs) =>
     eventArgs.Cancel = true;
 };
 
-// Create worker with the activity and workflow registered
+// Instantiating MyActivities
+var activities = new MyActivities();
+
+// Create worker with workflow and activity registered
 using var worker = new TemporalWorker(
     client,
-    new TemporalWorkerOptions("generate-certificate-task-queue").
-        AddWorkflow<CertificateGeneratorWorkflow>());
+    new TemporalWorkerOptions("retry-policy-sample-tasks").
+        AddAllActivities(activities).
+        AddWorkflow<RetryPolicySampleWorkflow>());
 
 // Run worker until cancelled
 Console.WriteLine("Running worker");
