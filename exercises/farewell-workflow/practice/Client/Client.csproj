@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Workflow\Workflow.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Temporalio" Version="1.1.1" />
-  </ItemGroup>
-
 </Project>
