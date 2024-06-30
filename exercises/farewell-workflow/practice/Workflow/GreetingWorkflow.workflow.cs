@@ -1,4 +1,5 @@
-namespace Temporalio.Farewell.Workflow;
+namespace TemporalioFarewell.Workflow;
+
 using Temporalio.Workflows;
 
 [Workflow]
@@ -12,15 +13,13 @@ public class GreetingWorkflow
         var greeting = await Workflow.ExecuteActivityAsync(
             () => TranslateActivities.GetSpanishGreeting(name),
             new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
-        
-        // TODO Part C: Uncomment the commented lines below
-        // To execute the GetSpanishFarewell Activity
-        // Spanish farewell
-        // var farewell = await Workflow.ExecuteActivityAsync(
-        //     () => TranslateActivities.GetSpanishFarewell(name),
-        //     new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
 
-        // Combine greeting and farewell into a single result
+        // Spanish farewell
+        var farewell = await Workflow.ExecuteActivityAsync(
+            () => TranslateActivities.GetSpanishFarewell(name),
+            new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
+
+        // Greeting and farewell
         return $"{greeting}\n{farewell}";
     }
 

@@ -1,6 +1,6 @@
 ﻿// Run the Workflow file
 using Temporalio.Client;
-using Temporalio.Farewell.Workflow;
+using TemporalioFarewell.Workflow;
 
 // Connect to the Temporal Service
 var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
@@ -8,13 +8,15 @@ var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
 // Generate a unique Workflow ID
 var workflowId = $"greeting-{Guid.NewGuid()}";
 
-// Prompt the user to enter their name and default to Temporal
-Console.WriteLine("Please enter your name:");
-var name = Console.ReadLine();
+var name = args.FirstOrDefault();
+
 if (string.IsNullOrEmpty(name))
 {
-    name = args.FirstOrDefault() ?? "Temporal";
+    Console.WriteLine("Please enter your name:");
+    name = Console.ReadLine();
 }
+
+name = string.IsNullOrEmpty(name) ? "Temporal" : name;
 
 // Start the Workflow
 var result = await client.ExecuteWorkflowAsync(

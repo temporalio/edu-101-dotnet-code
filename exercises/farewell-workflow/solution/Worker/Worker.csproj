@@ -7,9 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Workflow\Workflow.csproj" />
-  </ItemGroup>
-
-
 </Project>
