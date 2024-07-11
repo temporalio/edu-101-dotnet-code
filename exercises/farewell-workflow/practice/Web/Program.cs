@@ -24,7 +24,7 @@ app.MapGet("/get-spanish-greeting", (HttpContext context) =>
     {
         var name = query[0];
         var greeting = $"¡Hola, {name}!";
-        logger.LogInformation($"Returning Spanish greeting: {greeting}");
+        logger.LogInformation("Returning Spanish greeting: {Greeting}", greeting);
         return Results.Ok(greeting);
     }
     else

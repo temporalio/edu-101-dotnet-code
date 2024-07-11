@@ -1,4 +1,4 @@
-﻿// Run the Workflow file
+﻿// Run the Workflow
 using Temporalio.Client;
 using TemporalioFarewell.Workflow;
 
