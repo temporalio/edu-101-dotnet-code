@@ -1,6 +1,6 @@
 ﻿// This file is designated to run the Workflow
-using TemporalioHelloWorld.Workflow;
 using Temporalio.Client;
+using TemporalioHelloWorld.Workflow;
 
 // Create a client to localhost on "default" namespace
 var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
