@@ -17,7 +17,7 @@ and follow the following steps below.
 
 # Start the Worker (Java)
 
-1. Change into the `finale-workflow` directory.
+1. Change into the `finale-workflow` directory (cd exercises/finale-workflow).
 2. In one terminal, run the following command:
 
 ```sh
