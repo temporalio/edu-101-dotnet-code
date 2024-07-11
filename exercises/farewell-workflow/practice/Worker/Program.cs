@@ -13,7 +13,7 @@ IHost host = Host.CreateDefaultBuilder(args)
             clientTargetHost: "localhost:7233",
             clientNamespace: "default",
             taskQueue: "farewell-workflow")
-            .AddStaticActivities<TranslateActivities>() // Add Activities
+            .AddStaticActivities(typeof(TranslateActivities)) // Add Activities
             .AddWorkflow<GreetingWorkflow>()) // Add Workflow
     .Build();
 

@@ -1,16 +1,17 @@
 namespace TemporalioFarewell.Workflow;
 
 using Temporalio.Activities;
+using Temporalio.Client;
 
-public class TranslateActivities
+public static class TranslateActivities
 {
-    private static readonly HttpClient client = new();
+    private static readonly HttpClient Client = new();
 
     [Activity]
-    public static async Task<string> GetSpanishGreeting(string name)
+    public static async Task<string> GetSpanishGreetingAsync(string name)
     {
         var encodedName = Uri.EscapeDataString(name);
-        var response = await client.GetAsync($"http://localhost:5125/get-spanish-greeting?name={encodedName}");
+        var response = await Client.GetAsync($"http://localhost:5125/get-spanish-greeting?name={encodedName}");
         return await response.Content.ReadAsStringAsync();
     }
 

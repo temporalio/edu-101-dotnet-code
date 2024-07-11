@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -40,7 +41,7 @@ app.MapGet("/get-spanish-farewell", (HttpContext context) =>
     {
         var name = query[0];
         var farewell = $"¡Adiós, {name}!";
-        logger.LogInformation($"Returning Spanish farewell: {farewell}");
+        logger.LogInformation("Returning Spanish farewell: {Farewell}", farewell);
         return Results.Ok(farewell);
     }
     else
