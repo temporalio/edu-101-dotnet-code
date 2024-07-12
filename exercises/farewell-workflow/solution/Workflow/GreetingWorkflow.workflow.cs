@@ -1,6 +1,5 @@
 namespace TemporalioFarewell.Workflow;
 
-using Temporalio.Client;
 using Temporalio.Workflows;
 
 [Workflow]

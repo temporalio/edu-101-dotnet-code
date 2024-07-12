@@ -1,7 +1,6 @@
 namespace TemporalioFarewell.Workflow;
 
 using Temporalio.Activities;
-using Temporalio.Client;
 
 public static class TranslateActivities
 {
