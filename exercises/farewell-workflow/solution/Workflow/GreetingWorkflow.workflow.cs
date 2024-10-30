@@ -10,14 +10,12 @@ public class GreetingWorkflow
     {
         // Spanish greeting
         var greeting = await Workflow.ExecuteActivityAsync(
-            () => TranslateActivities.GetSpanishGreetingAsync(name),
+            (TranslateActivities act) => act.GetSpanishGreetingAsync(name),
             new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
-
         // Spanish farewell
         var farewell = await Workflow.ExecuteActivityAsync(
-            () => TranslateActivities.GetSpanishFarewellAsync(name),
+            (TranslateActivities act) => act.GetSpanishFarewellAsync(name),
             new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
-
         // Greeting and farewell
         return $"{greeting}\n{farewell}";
     }

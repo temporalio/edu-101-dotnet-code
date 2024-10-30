@@ -8,7 +8,7 @@ var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
 // Run workflow
 var result = await client.ExecuteWorkflowAsync(
     (SayHelloWorkflow wf) => wf.RunAsync("World"),
-    new(id: "my-workflow-id", taskQueue: "my-task-queue")); 
+    new(id: "my-workflow-id", taskQueue: "my-task-queue"));
 
 Console.WriteLine($"Workflow result: {result}");
 

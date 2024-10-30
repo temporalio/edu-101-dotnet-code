@@ -13,9 +13,9 @@ public class GreetingWorkflow
             () => TranslateActivities.GetSpanishGreetingAsync(name),
             new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
 
-        // Spanish farewell
-        var farewell = await Workflow.ExecuteActivityAsync(
-            () => TranslateActivities.GetSpanishFarewellAsync(name),
+        // TODO: uncomment the line below and change it to execute the Activity function you created
+        // var farewell = await Workflow.ExecuteActivityAsync(
+        //     () => TranslateActivities.GetSpanishFarewellAsync(name),
             new() { ScheduleToCloseTimeout = TimeSpan.FromMinutes(3) });
 
         // Greeting and farewell

@@ -1,20 +1,35 @@
-﻿// Run Worker
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Temporalio.Extensions.Hosting;
+﻿// This file is designated to run the Worker
+using Temporalio.Client;
+using Temporalio.Worker;
 using TemporalioFarewell.Workflow;
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureLogging(ctx =>
-        ctx.AddSimpleConsole().SetMinimumLevel(LogLevel.Information))
-    .ConfigureServices(ctx =>
-        ctx.AddHostedTemporalWorker(
-            clientTargetHost: "localhost:7233",
-            clientNamespace: "default",
-            taskQueue: "farewell-workflow")
-            .AddStaticActivities(typeof(TranslateActivities)) // Add Activities
-            .AddWorkflow<GreetingWorkflow>()) // Add Workflow
-    .Build();
+// Create a client to localhost on "default" namespace
+var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
 
-await host.RunAsync();
+// Cancellation token to shutdown worker on ctrl+c
+using var tokenSource = new CancellationTokenSource();
+Console.CancelKeyPress += (_, eventArgs) =>
+{
+    tokenSource.Cancel();
+    eventArgs.Cancel = true;
+};
+
+var activities = new TranslateActivities();
+
+// Create worker
+using var worker = new TemporalWorker(
+    client,
+    new TemporalWorkerOptions("farewell-workflow").
+        AddAllActivities(activities).
+        AddWorkflow<GreetingWorkflow>());
+
+// Run worker until cancelled
+Console.WriteLine("Running worker");
+try
+{
+    await worker.ExecuteAsync(tokenSource.Token);
+}
+catch (OperationCanceledException)
+{
+    Console.WriteLine("Worker cancelled");
+}
