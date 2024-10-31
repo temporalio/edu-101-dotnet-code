@@ -26,7 +26,7 @@ java -classpath java-activity-and-worker.jar io.temporal.training.PdfCertWorker
 
 # Start the Worker (.NET)
 
-In a new terminal, run the following command to run the C# Worker:
+In a new terminal, run the following command to run the Worker:
 
 ```sh
 dotnet run --project Worker
@@ -34,11 +34,11 @@ dotnet run --project Worker
 
 # Edit the Workflow (.NET)
 
-Open the [Program.cs](./Client/Program.cs) file, and change the argument passed to the Workflow from 'Maxim Fateev' to your name.
+Open the [Program.cs](./Client/Program.cs) file from your `Client` folder, and change the argument passed to the Workflow from 'Maxim Fateev' to your name.
 
 # Start the Workflow
 
-Run the command below in another terminal to start the C# Workflow:
+Run the command below in another terminal to start the Workflow:
 
 ```sh
 dotnet run --project Client
