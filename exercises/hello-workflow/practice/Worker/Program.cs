@@ -21,9 +21,9 @@ var activities = new MyActivities();
 // Create worker
 using var worker = new TemporalWorker(
     client,
-    new TemporalWorkerOptions("my-task-queue"). // TODO PART B: modify the statement here to specify the Task Queue name to be greeting-tasks
-        AddAllActivities(activities).
-        AddWorkflow<SayHelloWorkflow>());
+    new TemporalWorkerOptions("my-task-queue") // TODO PART B: modify the statement here to specify the Task Queue name to be greeting-tasks
+        .AddAllActivities(activities)
+        .AddWorkflow<SayHelloWorkflow>());
 
 // Run worker until cancelled
 Console.WriteLine("Running worker");

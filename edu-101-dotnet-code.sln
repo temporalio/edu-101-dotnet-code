@@ -5,23 +5,23 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exercises", "exercises", "{A2CB59AD-754E-45F6-8415-D55B5926824F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helloworld-workflow", "helloworld-workflow", "{F17731BD-5302-4DD8-9CF6-485E92EDE8F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hello-workflow", "hello-workflow", "{F17731BD-5302-4DD8-9CF6-485E92EDE8F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{CDBA81A6-FDD7-43D7-8B2D-2D7438DAD320}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow", "exercises\helloworld-workflow\solution\Workflow\Workflow.csproj", "{8F0986AC-7703-432C-A70A-4CE31ADB08CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow", "exercises\hello-workflow\solution\Workflow\Workflow.csproj", "{8F0986AC-7703-432C-A70A-4CE31ADB08CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "exercises\helloworld-workflow\solution\Worker\Worker.csproj", "{0ED8243F-3245-4079-9002-723F0CE39199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "exercises\hello-workflow\solution\Worker\Worker.csproj", "{0ED8243F-3245-4079-9002-723F0CE39199}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "exercises\helloworld-workflow\solution\Client\Client.csproj", "{31442704-C36A-4D53-A7AA-61BE200968F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "exercises\hello-workflow\solution\Client\Client.csproj", "{31442704-C36A-4D53-A7AA-61BE200968F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "practice", "practice", "{3F46E746-4DAA-4C30-AD10-32745F08818E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow", "exercises\helloworld-workflow\practice\Workflow\Workflow.csproj", "{667C41CB-41E6-4629-AFED-A1160CFC0A2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow", "exercises\hello-workflow\practice\Workflow\Workflow.csproj", "{667C41CB-41E6-4629-AFED-A1160CFC0A2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "exercises\helloworld-workflow\practice\Worker\Worker.csproj", "{AF51AF0B-E342-4169-97D9-26D62F1CE868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "exercises\hello-workflow\practice\Worker\Worker.csproj", "{AF51AF0B-E342-4169-97D9-26D62F1CE868}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "exercises\helloworld-workflow\practice\Client\Client.csproj", "{4B8785C6-9C76-4AFE-AD76-530F6AC0D9C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "exercises\hello-workflow\practice\Client\Client.csproj", "{4B8785C6-9C76-4AFE-AD76-530F6AC0D9C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
