@@ -5,10 +5,6 @@
     <Authors>Temporal</Authors>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <!--
-    TODO(cretz): Reenable when https://github.com/dotnet/format/issues/1800 fixed
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    -->
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -19,20 +15,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Temporalio" Version="1.1.2" />
-    <PackageReference Include="Temporalio.Extensions.DiagnosticSource" Version="1.1.2" />
-    <PackageReference Include="Temporalio.Extensions.Hosting" Version="1.1.2" />
-    <PackageReference Include="Temporalio.Extensions.OpenTelemetry" Version="1.1.2" />
-    <!--
-    Can also reference the SDK downloaded to a local directory:
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\temporal-sdk-dotnet\src\Temporalio\Temporalio.csproj" />
-    -->
+    <PackageReference Include="Temporalio" Version="1.3.1" />
+    <PackageReference Include="Temporalio.Extensions.DiagnosticSource" Version="1.3.1" />
+    <PackageReference Include="Temporalio.Extensions.Hosting" Version="1.3.1" />
+    <PackageReference Include="Temporalio.Extensions.OpenTelemetry" Version="1.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.33" PrivateAssets="all" />
+     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.10.48" PrivateAssets="all" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="all" />
   </ItemGroup>
 </Project>
