@@ -1,4 +1,4 @@
-namespace Temporalio.Finale.Workflow;
+namespace TemporalioFinale;
 
 using Temporalio.Activities;
 
