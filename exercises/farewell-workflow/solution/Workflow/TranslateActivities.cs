@@ -23,13 +23,4 @@ public class TranslateActivities
         var response = await client.GetAsync($"http://localhost:5125/get-spanish-farewell?name={encodedName}");
         return await response.Content.ReadAsStringAsync();
     }
-
-    public void Dispose()
-    {
-        if (!disposed)
-        {
-            client?.Dispose();
-            disposed = true;
-        }
-    }
 }
