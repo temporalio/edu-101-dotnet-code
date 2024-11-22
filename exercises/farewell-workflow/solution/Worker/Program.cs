@@ -14,7 +14,8 @@ Console.CancelKeyPress += (_, eventArgs) =>
     eventArgs.Cancel = true;
 };
 
-var activities = new TranslateActivities();
+using var httpClient = new HttpClient();
+using var activities = new TranslateActivities(httpClient);
 
 // Create worker
 using var worker = new TemporalWorker(
