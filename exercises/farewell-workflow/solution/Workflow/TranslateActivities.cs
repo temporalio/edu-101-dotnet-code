@@ -1,15 +1,12 @@
 namespace TemporalioFarewell.Workflow;
 
 using Temporalio.Activities;
-public sealed class TranslateActivities : IDisposable
+
+public class TranslateActivities
 {
     private readonly HttpClient client;
-    private bool disposed;
 
-    public TranslateActivities(HttpClient client)
-    {
-        this.client = client ?? throw new ArgumentNullException(nameof(client));
-    }
+    public TranslateActivities(HttpClient client) => this.client = client;
 
     [Activity]
     public async Task<string> GetSpanishGreetingAsync(string name)
