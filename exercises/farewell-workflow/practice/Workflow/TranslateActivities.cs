@@ -4,13 +4,15 @@ using Temporalio.Activities;
 
 public class TranslateActivities
 {
-    private static readonly HttpClient Client = new();
+    private readonly HttpClient client;
+
+    public TranslateActivities(HttpClient client) => this.client = client;
 
     [Activity]
     public async Task<string> GetSpanishGreetingAsync(string name)
     {
         var encodedName = Uri.EscapeDataString(name);
-        var response = await Client.GetAsync($"http://localhost:5125/get-spanish-greeting?name={encodedName}");
+        var response = await client.GetAsync($"http://localhost:5125/get-spanish-greeting?name={encodedName}");
         return await response.Content.ReadAsStringAsync();
     }
 
