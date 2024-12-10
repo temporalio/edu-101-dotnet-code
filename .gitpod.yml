@@ -1,4 +1,4 @@
-image: temporal-edu:1.4
+image: temporalio/gitpod-edu:1.4
 tasks:
     # task links a bash configuration file to a location that is not
     # specific to this course (/etc/bash.bashrc sources it from there)
