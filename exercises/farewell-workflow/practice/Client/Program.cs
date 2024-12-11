@@ -1,6 +1,6 @@
 ﻿// Run the Workflow file
 using Temporalio.Client;
-using TemporalioFarewell.PracticeWorkflow;
+using TemporalioFarewell.Practice.Workflow;
 
 // Connect to the Temporal Service
 var client = await TemporalClient.ConnectAsync(new("localhost:7233"));

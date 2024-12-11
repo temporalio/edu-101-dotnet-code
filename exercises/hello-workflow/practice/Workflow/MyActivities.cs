@@ -1,4 +1,4 @@
-namespace TemporalioHelloWorld.PracticeWorkflow;
+namespace TemporalioHelloWorld.Practice.Workflow;
 
 using Temporalio.Activities;
 
