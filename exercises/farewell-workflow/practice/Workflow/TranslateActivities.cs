@@ -1,4 +1,4 @@
-namespace TemporalioFarewell.Workflow;
+namespace TemporalioFarewell.PracticeWorkflow;
 
 using Temporalio.Activities;
 

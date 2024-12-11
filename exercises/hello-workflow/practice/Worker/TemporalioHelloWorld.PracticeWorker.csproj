@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Workflow\TemporalioHelloWorld.Workflow.csproj" />
+    <ProjectReference Include="..\Workflow\TemporalioHelloWorld.PracticeWorkflow.csproj" />
   </ItemGroup>
 
 </Project>

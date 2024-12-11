@@ -1,7 +1,7 @@
 ﻿// This file is designated to run the Worker
 using Temporalio.Client;
 using Temporalio.Worker;
-using TemporalioFarewell.Workflow;
+using TemporalioFarewell.PracticeWorkflow;
 
 // Create a client to localhost on "default" namespace
 var client = await TemporalClient.ConnectAsync(new("localhost:7233"));
