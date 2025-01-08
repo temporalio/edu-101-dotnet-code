@@ -33,18 +33,18 @@ jobs:
 
       - name: Build
         run: dotnet build
-        working-directory: exercises/hello-workflow/solution
+        working-directory: exercises/hello-workflow/solution/Worker
 
       - name: Build
         run: dotnet build
-        working-directory: exercises/farewell-workflow/solution
+        working-directory: exercises/farewell-workflow/solution/Worker
 
       - name: Check format
         if: ${{ matrix.checkTarget }}
         run: dotnet format --verify-no-changes
-        working-directory: exercises/hello-workflow/solution
+        working-directory: exercises/hello-workflow/solution/Worker
 
       - name: Check format
         if: ${{ matrix.checkTarget }}
         run: dotnet format --verify-no-changes
-        working-directory: exercises/farewell-workflow/solution
+        working-directory: exercises/farewell-workflow/solution/Worker
