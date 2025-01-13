@@ -11,13 +11,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest, ubuntu-arm]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         include:
           - os: windows-latest
             checkTarget: true
           - os: ubuntu-latest
-          - os: ubuntu-arm
-            runsOn: ubuntu-24.04-arm64-2-core
     runs-on: ${{ matrix.runsOn || matrix.os }}
     steps:
       - name: Print build information
