@@ -30,13 +30,11 @@ The following links provide additional information that you may find helpful as 
 - [Temporal .NET SDK API Reference](https://dotnet.temporal.io/)
 - [.NET SDK Reference](https://github.com/temporalio/sdk-dotnet/)
 - [C# Language Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
-- [GitPod Documentation: Troubleshooting](https://www.gitpod.io/docs/troubleshooting)
 
 ## Exercise Environment for this Course
 
-You can launch an exercise environment for this course in GitPod by clicking the button below:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-101-dotnet-code)
+You can launch an exercise environment for this course using GitHub Codespaces by 
+following [this](codespaces.md) walkthrough.
 
 Alternatively, you can follow
 [these instructions](https://learn.temporal.io/getting_started/dotnet/dev_environment/) to set up your own Temporal Cluster with the `temporal` CLI, which you can use as an exercise environment.
