@@ -14,15 +14,10 @@ Console.CancelKeyPress += (_, eventArgs) =>
     eventArgs.Cancel = true;
 };
 
-// Create an activity instance since we have instance activities. If we had
-// all static activities, we could just reference those directly.
-var activities = new MyActivities();
-
 // Create worker
 using var worker = new TemporalWorker(
     client,
     new TemporalWorkerOptions("my-task-queue") // TODO PART B: modify the statement here to specify the Task Queue name to be greeting-tasks
-        .AddAllActivities(activities)
         .AddWorkflow<SayHelloWorkflow>());
 
 // Run worker until cancelled
