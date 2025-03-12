@@ -14,14 +14,10 @@ Console.CancelKeyPress += (_, eventArgs) =>
     eventArgs.Cancel = true;
 };
 
-// Instantiating MyActivities
-var activities = new MyActivities();
-
 // Create worker
 using var worker = new TemporalWorker(
     client,
     new TemporalWorkerOptions("greeting-tasks")
-        .AddAllActivities(activities)
         .AddWorkflow<SayHelloWorkflow>());
 
 // Run worker until cancelled
