@@ -74,7 +74,7 @@ below to see how to use the `temporal` command to display the result.
 The mix of single and double quotes we currently have pertains to UNIX-style shells. However, If you are running the Temporal CLI in Windows (such as Powershell), you will need to use Windows-style quote escaping like this:
 
 ```
-temporal workflow start --type GreetSomeone --task-queue greeting-tasks --workflow-id my-first-workflow --input '\"Donna\"'
+temporal workflow start --type SayHelloWorkflow --task-queue greeting-tasks --workflow-id my-first-workflow --input '\"Donna\"'
 ```
 
 This is a general Windows approach for handling quotes in parameters, not something specific to Temporal.
